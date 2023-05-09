@@ -1,13 +1,56 @@
 .shop-nav {
   width: 30vw;
   padding: 2rem;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
 }
 
 nav ul {
   list-style: none;
+  display: flex;
+  flex-flow: column;
+  align-items: flex-start;
 }
 
 nav ul li {
   margin-top: 1rem;
   font-size: 1.5rem;
+}
+
+.shop-nav h2 {
+  font-size: 1.2rem;
+  font-weight: normal;
+}
+
+.shop-nav-subtitle {
+  font-weight: bold;
+  font-size: 1.5rem;
+  margin-top: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.shop-nav ul a:link,
+.shop-nav ul a:visited {
+  text-decoration: none;
+}
+
+.shop-nav ul a li {
+  color: black;
+  position: relative;
+}
+
+.shop-nav li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease-in-out;
+  background-color: black;
+}
+
+.shop-nav li:hover:after {
+  width: 100%;
 }

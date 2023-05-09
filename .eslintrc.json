@@ -11,6 +11,8 @@
   },
   "plugins": ["react"],
   "rules": {
-    "quotes": ["off", "double"]
+    "quotes": ["off", "double"],
+    "comma-dangle": "off",
+    "import/no-extraneous-dependencies": "off"
   }
 }

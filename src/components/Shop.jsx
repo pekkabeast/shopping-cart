@@ -1,13 +1,14 @@
 import React from "react";
+
 import ShopNav from "./ShopNav";
-import ProductList from "./ProductList";
+import ProductCategory from "./ProductCategory";
 import "../styles/Shop.css";
 
 function Shop() {
   return (
     <div className="shop">
       <ShopNav />
-      <ProductList />
+      <ProductCategory />
     </div>
   );
 }
