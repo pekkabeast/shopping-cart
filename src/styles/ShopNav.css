@@ -1,0 +1,13 @@
+.shop-nav {
+  width: 30vw;
+  padding: 2rem;
+}
+
+nav ul {
+  list-style: none;
+}
+
+nav ul li {
+  margin-top: 1rem;
+  font-size: 1.5rem;
+}

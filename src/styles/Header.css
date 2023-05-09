@@ -1,0 +1,69 @@
+.main-header nav {
+  list-style: none;
+}
+
+.main-header {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  min-height: 10vh;
+  background-color: none;
+}
+
+.dark,
+.dark a {
+  color: white;
+}
+
+.light,
+.light a {
+  color: black;
+}
+
+.nav-links {
+  width: 30%;
+  display: flex;
+  justify-content: space-around;
+  align-items: baseline;
+}
+
+.nav-links a:link,
+.nav-links a:visited {
+  text-decoration: none;
+}
+
+.nav-links li {
+  position: relative;
+}
+
+.nav-links li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 0;
+  height: 2px;
+  transition: width 0.3s ease-in-out;
+}
+
+.nav-links .active > li:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 100%;
+  width: 100%;
+  height: 2px;
+  background-color: white;
+}
+
+.dark .nav-links li:after {
+  background-color: white;
+}
+
+.light .nav-links li:after {
+  background-color: black;
+}
+
+.nav-links li:hover:after {
+  width: 100%;
+}
