@@ -13,7 +13,7 @@ function Header() {
         <NavLink to="/">
           <li>Home</li>
         </NavLink>
-        <NavLink to="/shop">
+        <NavLink to="/shop/catalog">
           <li>Shop</li>
         </NavLink>
         <li>Cart</li>

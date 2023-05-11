@@ -12,6 +12,7 @@
 
 .dark,
 .dark a {
+  background-color: black;
   color: white;
 }
 
@@ -21,7 +22,7 @@
 }
 
 .nav-links {
-  width: 30%;
+  width: 40%;
   display: flex;
   justify-content: space-around;
   align-items: baseline;

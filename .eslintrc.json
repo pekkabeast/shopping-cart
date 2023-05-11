@@ -13,6 +13,8 @@
   "rules": {
     "quotes": ["off", "double"],
     "comma-dangle": "off",
-    "import/no-extraneous-dependencies": "off"
+    "import/no-extraneous-dependencies": "off",
+    "indent": "off",
+    "react/jsx-indent": "off"
   }
 }

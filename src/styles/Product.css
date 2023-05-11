@@ -1,0 +1,29 @@
+.product-card {
+  outline: 1px solid lightgray;
+  border-radius: 1rem;
+  display: flex;
+  flex-flow: column nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding: 1rem;
+  margin: 1rem;
+  min-height: 220px;
+}
+
+.product-card:hover {
+  outline: 1px solid gray;
+  cursor: pointer;
+}
+
+.product-card img {
+  height: auto;
+  width: 150px;
+}
+
+.image-container {
+  height: 150px;
+  width: 150px;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}

@@ -12,28 +12,31 @@ function ShopNav() {
         <div className="shop-nav-subtitle">{_.upperCase(productCategory)}</div>
       </div>
       <ul>
-        <NavLink to="/shop/cpus">
+        <NavLink to="/shop/catalog/all">
+          <li>All Components</li>
+        </NavLink>
+        <NavLink to="/shop/catalog/cpu">
           <li>CPUs</li>
         </NavLink>
-        <NavLink to="/shop/cpu-coolers">
+        <NavLink to="/shop/catalog/cooler">
           <li>CPU Coolers</li>
         </NavLink>
-        <NavLink to="/shop/motherboards">
+        <NavLink to="/shop/catalog/motherboard">
           <li>Motherboards</li>
         </NavLink>
-        <NavLink to="/shop/memory">
+        <NavLink to="/shop/catalog/memory">
           <li>Memory</li>
         </NavLink>
-        <NavLink to="/shop/storage">
+        <NavLink to="/shop/catalog/storage">
           <li>Storage</li>
         </NavLink>
-        <NavLink to="/shop/video-card">
+        <NavLink to="/shop/catalog/video_card">
           <li>Video Card</li>
         </NavLink>
-        <NavLink to="/shop/power-supplies">
+        <NavLink to="/shop/catalog/power_supply">
           <li>Power Supplies</li>
         </NavLink>
-        <NavLink to="/shop/cases">
+        <NavLink to="/shop/catalog/case">
           <li>Cases</li>
         </NavLink>
       </ul>

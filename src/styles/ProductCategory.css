@@ -1,4 +1,7 @@
 .product-list {
   width: 70vw;
   padding: 2rem;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: flex-start;
 }
