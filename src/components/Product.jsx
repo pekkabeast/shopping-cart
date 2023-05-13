@@ -1,6 +1,7 @@
 import React from "react";
 import PropTypes from "prop-types";
 import "../styles/Product.css";
+import { NavLink } from "react-router-dom";
 
 function Product(props) {
   const { product } = props;
@@ -16,13 +17,15 @@ function Product(props) {
   };
 
   return (
-    <div id={product.id} className="product-card">
-      <div className="image-container">
-        <img src={product.imagePath} alt={product.productName} />
+    <NavLink to={`/shop/catalog/${product.category}/${product.id}`}>
+      <div id={product.id} className="product-card">
+        <div className="image-container">
+          <img src={product.imagePath} alt={product.productName} />
+        </div>
+        <div className="product-name">{product.productName}</div>
+        <div className="product-cost">{`$${product.cost}`}</div>
       </div>
-      <div className="product-name">{product.productName}</div>
-      <div className="product-cost">{`$${product.cost}`}</div>
-    </div>
+    </NavLink>
   );
 }
 

@@ -1,9 +1,17 @@
 .shop-nav {
-  width: 30vw;
-  padding: 2rem;
+  width: 25vw;
+  padding: 2rem 0rem 2rem 2rem;
+
   display: flex;
   flex-flow: column;
   align-items: flex-start;
+  border-right: 1px solid lightgray;
+}
+
+@media (max-width: 480px) {
+  .shop-nav {
+    width: 100vw;
+  }
 }
 
 nav ul {

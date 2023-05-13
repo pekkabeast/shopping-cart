@@ -2,3 +2,9 @@
   display: flex;
   height: 90%;
 }
+
+@media (max-width: 480px) {
+  .shop {
+    flex-flow: column nowrap;
+  }
+}

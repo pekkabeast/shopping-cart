@@ -15,6 +15,9 @@
     "comma-dangle": "off",
     "import/no-extraneous-dependencies": "off",
     "indent": "off",
-    "react/jsx-indent": "off"
+    "react/jsx-indent": "off",
+    "react/jsx-wrap-multilines": "off",
+    "operator-linebreak": "off",
+    "react/prop-types": "off"
   }
 }

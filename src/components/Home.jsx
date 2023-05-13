@@ -10,7 +10,7 @@ function Home() {
       <h2 className="home-desc">The future is now.</h2>
 
       <h2 className="shop-now">
-        <NavLink to="/shop">Shop Now</NavLink>
+        <NavLink to="/shop/catalog/all">Shop Now</NavLink>
       </h2>
     </div>
   );
