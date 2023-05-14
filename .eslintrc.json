@@ -20,6 +20,7 @@
     "operator-linebreak": "off",
     "object-curly-newline": "off",
     "react/prop-types": "off",
-    "import/no-named-as-default": "off"
+    "import/no-named-as-default": "off",
+    "import/no-dynamic-require": "off"
   }
 }

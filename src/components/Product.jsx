@@ -23,7 +23,10 @@ function Product(props) {
     >
       <div id={product.id} className="product-card">
         <div className="image-container">
-          <img src={product.imagePath} alt={product.productName} />
+          <img
+            src={process.env.PUBLIC_URL + product.imagePath}
+            alt={product.productName}
+          />
         </div>
         <div className="product-name">{product.productName}</div>
         <div className="product-cost">{`$${product.cost}`}</div>

@@ -1,6 +1,5 @@
 import { NavLink } from "react-router-dom";
 import React from "react";
-// import Background from "../assets/computer.jpg";
 
 import "../styles/Home.css";
 

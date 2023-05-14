@@ -15,7 +15,7 @@ function Cart(props) {
   return (
     <div className="basket-item">
       <img
-        src={`../${item[0].imagePath}`}
+        src={process.env.PUBLIC_URL + item[0].imagePath}
         alt={item[0].productName}
         className="cart-image"
       />
