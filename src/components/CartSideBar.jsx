@@ -132,18 +132,14 @@ function CartSideBar(props) {
         </div>
         <div className="cart-totalCost" />
         <NavLink
-          to="/shopping-cart/shop/catalog/all"
+          to="/shop/catalog/all"
           className="add-items-btn"
           onClick={toggleCartVisibility}
         >
           Add More Items
         </NavLink>
         {cart.length > 0 ? (
-          <NavLink
-            to="/shopping-cart"
-            onClick={toggleCartVisibility}
-            className="checkout"
-          >
+          <NavLink to="/" onClick={toggleCartVisibility} className="checkout">
             Checkout
           </NavLink>
         ) : (

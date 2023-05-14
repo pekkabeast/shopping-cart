@@ -140,9 +140,9 @@ function App() {
     <HashRouter>
       <Header toggleCartVisibility={toggleCartVisibility} cart={cart} />
       <Routes>
-        <Route path="/shopping-cart" element={<Home />} />
+        <Route path="/" element={<Home />} />
         <Route
-          path="/shopping-cart/shop/catalog"
+          path="/shop/catalog"
           element={
             <Shop
               productList={productList}

@@ -18,7 +18,7 @@ function Product(props) {
 
   return (
     <NavLink
-      to={`/shopping-cart/shop/catalog/${product.category}/${product.id}`}
+      to={`/shop/catalog/${product.category}/${product.id}`}
       className="product-nav"
     >
       <div id={product.id} className="product-card">
