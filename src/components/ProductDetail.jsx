@@ -30,7 +30,7 @@ function ProductDetail(props) {
     <div className="product-detail">
       <div className="product-detail-side">
         <h2>{`Product Name: ${product.productName}`}</h2>
-        <img src={`../${product.imagePath}`} alt={product.productName} />
+        <img src={`${product.imagePath}`} alt={product.productName} />
         <div className="cost">{`Price: $${product.cost}`}</div>
       </div>
       <button type="button" onClick={updateCart}>
