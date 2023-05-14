@@ -80,7 +80,6 @@ function CartSideBar(props) {
     setCart(
       cart.map((item) => {
         if (item[0].id === id) {
-          console.log(1);
           if (item[1] + 1 < 1000) {
             return [item[0], item[1] + 1];
           }
@@ -133,14 +132,18 @@ function CartSideBar(props) {
         </div>
         <div className="cart-totalCost" />
         <NavLink
-          to="/shop/catalog/all"
+          to="/shopping-cart/shop/catalog/all"
           className="add-items-btn"
           onClick={toggleCartVisibility}
         >
           Add More Items
         </NavLink>
         {cart.length > 0 ? (
-          <NavLink to="/" onClick={toggleCartVisibility} className="checkout">
+          <NavLink
+            to="/shopping-cart"
+            onClick={toggleCartVisibility}
+            className="checkout"
+          >
             Checkout
           </NavLink>
         ) : (

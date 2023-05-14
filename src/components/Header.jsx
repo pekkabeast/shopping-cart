@@ -32,10 +32,10 @@ function Header(props) {
     >
       <h3>fakeStore.</h3>
       <nav className="nav-links">
-        <NavLink to="/">
+        <NavLink to="/shopping-cart">
           <li>Home</li>
         </NavLink>
-        <NavLink to="/shop/catalog/all">
+        <NavLink to="/shopping-cart/shop/catalog/all">
           <li>Shop</li>
         </NavLink>
         <li>

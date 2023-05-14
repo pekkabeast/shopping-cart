@@ -1,5 +1,5 @@
 import React, { useState, useCallback } from "react";
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 import { uniqueId } from "lodash";
 import Home from "./components/Home";
 import Shop from "./components/Shop";
@@ -137,12 +137,12 @@ function App() {
     event.stopPropagation();
   });
   return (
-    <BrowserRouter>
+    <HashRouter>
       <Header toggleCartVisibility={toggleCartVisibility} cart={cart} />
       <Routes>
-        <Route path="/" element={<Home />} />
+        <Route path="/shopping-cart" element={<Home />} />
         <Route
-          path="/shop/catalog"
+          path="/shopping-cart/shop/catalog"
           element={
             <Shop
               productList={productList}
@@ -163,7 +163,7 @@ function App() {
         cart={cart}
         setCart={setCart}
       />
-    </BrowserRouter>
+    </HashRouter>
   );
 }
 
