@@ -11,7 +11,7 @@
   background-color: white;
   display: flex;
   flex-flow: column;
-  width: 300px;
+  width: 400px;
   height: 100%;
   position: fixed;
   right: 0;
@@ -55,6 +55,27 @@
 .hidden {
   width: 0;
   opacity: 0;
+}
+
+.cart-totalCost {
+  align-self: flex-start;
+  font-weight: bold;
+  font-size: 1.2rem;
+  margin: 0.5rem;
+}
+
+.add-items-btn {
+  text-decoration: none;
+  color: black;
+  align-self: center;
+  position: relative;
+  border: 1px solid lightgray;
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+}
+
+.add-items-btn:hover {
+  border: 1px solid gray;
 }
 
 @media (max-width: 480px) {

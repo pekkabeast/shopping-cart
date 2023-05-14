@@ -21,10 +21,8 @@ function ProductDetail(props) {
           return item;
         })
       );
-      console.log("added 1");
     } else {
       setCart([...cart, [product, 1]]);
-      console.log("added 2");
     }
   }
 

@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React, { useCallback, useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faX } from "@fortawesome/free-solid-svg-icons";
 import "../styles/CartSideBar.css";
@@ -13,8 +13,29 @@ function CartSideBar(props) {
     cart: [],
   };
 
+  useEffect(() => {
+    let sum = 0;
+    cart.forEach((item) => {
+      sum += item[0].cost * item[1];
+    });
+    if (!Number.isNaN(sum)) {
+      document.querySelector(".cart-totalCost").textContent = `Subtotal: $${(
+        Math.round(sum * 100) / 100
+      ).toFixed(2)}`;
+    }
+  }, [cart]);
+
   const updateCart = useCallback((event) => {
-    if (event.target.value < 1000 && event.target.value > -1) {
+    if (
+      (event.target.value === "" && document.activeElement !== event.target) ||
+      event.target.value === "0"
+    ) {
+      setCart(
+        cart.filter(
+          (item) => item[0].id !== event.target.getAttribute("data-productid")
+        )
+      );
+    } else if (event.target.value < 1000 && event.target.value > -1) {
       setCart(
         cart.map((item) => {
           if (item[0].id === event.target.getAttribute("data-productid")) {
@@ -61,7 +82,14 @@ function CartSideBar(props) {
             <Cart item={item} setCart={updateCart} key={item[0].id} />
           ))}
         </div>
-        <NavLink to="/shop/catalog/all">Add Items</NavLink>
+        <div className="cart-totalCost" />
+        <NavLink
+          to="/shop/catalog/all"
+          className="add-items-btn"
+          onClick={toggleCartVisibility}
+        >
+          Add Items
+        </NavLink>
       </div>
     </div>
   );

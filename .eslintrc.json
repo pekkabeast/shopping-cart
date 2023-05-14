@@ -18,6 +18,8 @@
     "react/jsx-indent": "off",
     "react/jsx-wrap-multilines": "off",
     "operator-linebreak": "off",
-    "react/prop-types": "off"
+    "object-curly-newline": "off",
+    "react/prop-types": "off",
+    "import/no-named-as-default": "off"
   }
 }

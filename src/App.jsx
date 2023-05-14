@@ -127,6 +127,7 @@ function App() {
 
   const [sideBarActive, setSideBarActive] = useState(false);
   const [cart, setCart] = useState([]);
+
   const toggleCartVisibility = useCallback((event) => {
     if (sideBarActive) {
       setSideBarActive(false);
@@ -155,6 +156,7 @@ function App() {
           </Route>
         </Route>
       </Routes>
+
       <CartSideBar
         isActive={sideBarActive}
         toggleCartVisibility={toggleCartVisibility}

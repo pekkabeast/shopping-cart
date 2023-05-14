@@ -26,7 +26,7 @@ function Cart(props) {
           <FontAwesomeIcon icon={faMinus} />
           <input
             type="number"
-            value={!Number.isNaN(parseInt(item[1], 10)) ? item[1] : ""}
+            value={item[1] !== "invalid" ? item[1] : ""}
             onChange={setCart}
             data-productid={item[0].id}
           />
