@@ -20,6 +20,12 @@
   width: 150px;
 }
 
+.product-nav {
+  text-decoration: none;
+  color: black;
+  font-size: 1.1rem;
+}
+
 .image-container {
   height: 150px;
   width: 150px;

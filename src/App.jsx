@@ -138,7 +138,7 @@ function App() {
   });
   return (
     <BrowserRouter>
-      <Header toggleCartVisibility={toggleCartVisibility} />
+      <Header toggleCartVisibility={toggleCartVisibility} cart={cart} />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route

@@ -64,7 +64,8 @@
   margin: 0.5rem;
 }
 
-.add-items-btn {
+.add-items-btn,
+.checkout {
   text-decoration: none;
   color: black;
   align-self: center;

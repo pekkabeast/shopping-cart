@@ -1,4 +1,4 @@
-import React, { useEffect } from "react";
+import React from "react";
 import { useParams } from "react-router-dom";
 import ShopNav from "./ShopNav";
 import ProductCategory from "./ProductCategory";
@@ -8,11 +8,6 @@ import "../styles/Shop.css";
 
 function Shop(props) {
   const { productList, setCart, currentCart } = props;
-
-  useEffect(() => {
-    console.log("Component mounting");
-    console.log(currentCart);
-  }, []);
 
   Shop.defaultProps = {
     currentCart: [],

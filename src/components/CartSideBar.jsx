@@ -48,6 +48,49 @@ function CartSideBar(props) {
     }
   });
 
+  const decreaseQuant = useCallback((event) => {
+    let id = null;
+    let { parentElement } = event.target;
+    while (id === null) {
+      id = parentElement.getAttribute("data-basketid");
+      parentElement = parentElement.parentElement;
+    }
+    setCart(
+      cart
+        .map((item) => {
+          if (item[0].id === id) {
+            if (item[1] - 1 > 0) {
+              return [item[0], item[1] - 1];
+            }
+            return [item[0], 0];
+          }
+          return item;
+        })
+        .filter((item) => item[1] !== 0)
+    );
+  });
+
+  const increaseQuant = useCallback((event) => {
+    let id = null;
+    let { parentElement } = event.target;
+    while (id === null) {
+      id = parentElement.getAttribute("data-basketid");
+      parentElement = parentElement.parentElement;
+    }
+    setCart(
+      cart.map((item) => {
+        if (item[0].id === id) {
+          console.log(1);
+          if (item[1] + 1 < 1000) {
+            return [item[0], item[1] + 1];
+          }
+          return [item[0], 999];
+        }
+        return item;
+      })
+    );
+  });
+
   return (
     <div
       className={isActive ? "cartSideBar " : "cartSideBar hidden"}
@@ -79,7 +122,13 @@ function CartSideBar(props) {
         </button>
         <div className="cart-list">
           {cart.map((item) => (
-            <Cart item={item} setCart={updateCart} key={item[0].id} />
+            <Cart
+              item={item}
+              setCart={updateCart}
+              decreaseQuant={decreaseQuant}
+              increaseQuant={increaseQuant}
+              key={item[0].id}
+            />
           ))}
         </div>
         <div className="cart-totalCost" />
@@ -88,8 +137,15 @@ function CartSideBar(props) {
           className="add-items-btn"
           onClick={toggleCartVisibility}
         >
-          Add Items
+          Add More Items
         </NavLink>
+        {cart.length > 0 ? (
+          <NavLink to="/" onClick={toggleCartVisibility} className="checkout">
+            Checkout
+          </NavLink>
+        ) : (
+          ""
+        )}
       </div>
     </div>
   );

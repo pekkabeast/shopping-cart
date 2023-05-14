@@ -17,7 +17,10 @@ function Product(props) {
   };
 
   return (
-    <NavLink to={`/shop/catalog/${product.category}/${product.id}`}>
+    <NavLink
+      to={`/shop/catalog/${product.category}/${product.id}`}
+      className="product-nav"
+    >
       <div id={product.id} className="product-card">
         <div className="image-container">
           <img src={product.imagePath} alt={product.productName} />
